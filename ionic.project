@@ -1,0 +1,10 @@
+{
+  "name": "MDA Reports",
+  "app_id": "com.mda.reports",
+ "proxies": [
+    {
+      "path": "/js",
+      "proxyUrl": "http://localhost/reports/js"
+    }
+  ]
+}

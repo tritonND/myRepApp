@@ -1,0 +1,32 @@
+<!-- <script id="templates/tlActivities.html" type="text/ng-template">  -->
+<ion-view title="Unit Head Report (Activities)" id="page12" class=" " align="center">
+    <ion-content padding="true" scroll="true"  class="has-header  has-footer">
+        <h3 style="color:#ab0ee9;font-weight:400;text-align:center;" class=" ">Welcome <b> {{data.fullname}} </b></h3>
+        <h4 style="color:#255665;text-align:center;" class=" ">{{data.currentWeekNumber}}</h4>
+        <div class="spacer" style="width: 300px; height: 11px;"></div>
+      <div>
+       <b>  <p style="color:#0D1B7A;font-size:18px;text-align:center;" class=" ">List your activities for the previous week</p> </b>
+      </div>
+      <div>
+        <form name="activitiesForm1" ng-controller="activitiesCtrl" class="list " novalidate>
+            <label class="item item-input " id="teamLeadReportActivities-textarea1">
+                <textarea ng-model="data.activities1" placeholder="List Activities Here" rows="9" required></textarea>
+                <div class="item item-message" ng-if="step12Submitted && activitiesForm1.activities.$error.required">
+                    It is required that you enter your activities
+                </div>
+            </label>
+
+          <div align="center" style="margin-top: 5%">
+            <button ui-sref="houSuggestions" ng-click="submit()" ng-disabled="!data.activities1"  class=" button button-positive  icon-left ion-forward ">Next</button>
+          </div>
+        </form>
+      </div>
+    </ion-content>
+
+  <div class="bar bar-footer bar-dark">
+    <h3 class="title">&copy; Edo ICTA</h3>
+  </div>
+
+
+</ion-view>
+  <!--  </script>  -->

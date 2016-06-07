@@ -1,0 +1,31 @@
+<ion-view title="Unit Head Report Summary" align="center" ng-controller="summaryCtrl1" id="page16" class=" ">
+  <ion-content padding="true" scroll="true" class="has-header">
+     <div class="list " align="justify" style="text-wrap: normal; margin-top: 5%">
+       <div class="item item-divider tab-item-positive tab-item-light " align="center">
+         <p>{{ data.currentWeekNumber}} </p> <p>  Report by <b>{{data.fullname}}</b>  </p>
+       </div>
+
+       <div class="item item-text-wrap" ng-if="data.activities1">
+         <b>Activities</b>
+         <p>{{ data.activities1 }}</p>
+       </div>
+       <div class="item item-text-wrap" ng-if="data.suggestions1">
+         <b>Suggestions</b> <p>{{ data.suggestions1 }}</p>
+       </div>
+       <div class="item item-text-wrap" ng-if="data.challenges1">
+         <b>Challenges</b> <p>{{ data.challenges1 }}</p>
+       </div>
+       <div class="item item-text-wrap" ng-if="data.plans1">
+         <b>Plans</b> <p>  {{data.plans1}}</p>
+       </div>
+
+       <form  novalidate>
+         <div align="center" style="margin-top: 5%">
+           <button ui-sref="houPlans" class=" button button-positive  icon-left ion-ios-undo ">Back</button>
+           <button type="submit" ng-click="submit()"  class=" button button-positive  icon-left ion-ionic ">Submit</button>
+         </div>
+       </form>
+     </div>
+  </ion-content>
+</ion-view>
+

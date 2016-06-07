@@ -1,0 +1,31 @@
+<ion-view title="Team Lead Report Summary" align="center" id="page6" class=" ">
+  <ion-content padding="true" scroll="true" class="has-header">
+
+     <div class="list item-text-wrap" align="justify" style="text-wrap: normal; margin-top: 5%">
+          <div class="item item-divider tab-item-positive tab-item-light " align="center">
+            <p>{{ data.currentWeekNumber}} </p> <p>  Report by <b>{{data.fullname}}</b>  </p>
+         </div>
+         <div class="item item-text-wrap" ng-if="data.activities">
+             <b>Activities</b>
+           <p>{{ data.activities }}</p>
+         </div>
+         <div class="item item-text-wrap" ng-if="data.suggestions">
+             <b>Suggestions</b> <p>{{ data.suggestions }}</p>
+         </div>
+         <div class="item item-text-wrap" ng-if="data.challenges">
+              <b>Challenges</b> <p>{{ data.challenges }}</p>
+         </div>
+         <div class="item item-text-wrap" ng-if="data.plans">
+             <b>Plans</b> <p>  {{data.plans}}</p>
+         </div>
+        <form  novalidate>
+          <div align="center" style="margin-top: 5%">
+            <button ui-sref="tlPlans" class=" button button-positive  icon-left ion-ios-undo ">Back</button>
+            <button type="submit" ng-click="submit()"  class=" button button-positive  icon-left ion-ionic ">Submit</button>
+          </div>
+        </form>
+     </div>
+  </ion-content>
+
+</ion-view>
+

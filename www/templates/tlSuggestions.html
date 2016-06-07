@@ -1,0 +1,29 @@
+ <ion-view title="Team Lead Report (Suggestions)" align="center" id="page3" class=" " style="font-family: 'Segoe UI Light' !important;  ">
+    <ion-content padding="true" scroll="true" class="has-header">
+        <!-- <h4 id="teamLeadReportSuggestions-heading6" style="color:#000000;font-weight:400;text-align:center;" class=" ">Welcome </h4> -->
+        <!-- <h4 style="color:#000000;text-align:center;" class=" ">Week {{Date.now()}}</h4> -->
+        <div class="spacer" style="width: 300px; height: 11px;"></div>
+      <div>
+      <b> <p style="color:#365d7a;font-size:18px; text-align:center;" class=" ">Suggestions or Comments if any</p> </b>
+      </div>
+
+      <div>
+      <form name="suggestionsForm" ng-controller="suggestionsCtrl" class="list " novalidate>
+            <label class="item item-input " >
+               <textarea ng-model="data.suggestions" placeholder="Place Comments here" rows="9"></textarea>
+                <div class="item item-message" ng-if="step3Submitted && suggestionsForm.suggestions.$error.required">
+                    It is required that you enter your suggestions
+                </div>
+            </label>
+          <div align="center" style="margin-top: 5%">
+            <button ui-sref="tlActivities" class=" button button-positive  icon-left ion-ios-undo ">Back</button>
+            <button ui-sref="tlChallenges" ng-disabled="!data.suggestions" ng-click="submit()" class=" button button-positive  icon-right ion-forward ">Next</button>
+          </div>
+        </form>
+      </div>
+    </ion-content>
+    <div class="bar bar-footer bar-dark">
+        <h3 class="title">&copy; Edo ICTA</h3>
+    </div>
+
+</ion-view>

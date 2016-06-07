@@ -1,0 +1,30 @@
+<ion-view title="Unit Head Report (Plans)" align="center" id="page15" class=" ">
+    <ion-content padding="true" scroll="true" class="has-header">
+      <!--  <h4 id="teamLeadReportPlans-heading4" style="color:#000000;font-weight:400;text-align:center;" class=" ">Welcome $username</h4> -->
+      <!--  <h4 id="teamLeadReportPlans-heading5" style="color:#000000;text-align:center;" class=" ">Week {{Date.now()}}</h4>  -->
+        <div class="spacer" style="width: 300px; height: 11px;"></div>
+      <div>
+        <p style="color:#0D1B7A;font-size:18px;text-align:center;" class=" ">List your Plans for the current week</p>
+      </div>
+      <div>
+        <form ng-controller="plansCtrl" name="plansForm1" class="list " novalidate>
+            <label class="item item-input ">
+               <textarea ng-model="data.plans1" placeholder="List Plans Here" rows="9"></textarea>
+
+                <div class="item item-message" ng-if="step15Submitted && plansForm1.plans.$error.required">
+                    It is required that you enter your plans
+                </div>
+            </label>
+          <div align="center" style="margin-top: 5%">
+            <button ui-sref="houChallenges" class=" button button-positive  icon-left ion-ios-undo ">Back</button>
+            <button ui-sref="houSummary" ng-click="submit()" ng-disabled="!data.plans1" class=" button button-positive  icon-right ion-forward ">Next</button>
+          </div>
+        </form>
+      </div>
+    </ion-content>
+
+    <div class="bar bar-footer bar-dark">
+        <h3 class="title">&copy; Edo ICTA</h3>
+    </div>
+
+</ion-view>
