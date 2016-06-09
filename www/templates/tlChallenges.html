@@ -9,21 +9,22 @@
       <div>
        <form name="challengesForm" ng-controller="challengesCtrl" class="list " novalidate>
            <label class="item item-input " id="teamLeadReportChallenges-textarea5">
-               <textarea ng-model="data.challenges" placeholder="List Challenges Here" rows="9"></textarea>
+               <textarea style="font-size: 1.2em" ng-model="data.challenges" placeholder="List Challenges Here" rows="9"></textarea>
+             <!--
                <div class="item item-message" ng-if="step4Submitted && challengesForm.challenges.$error.required">
                    It is required that you enter your challenges
-               </div>
+               </div>  -->
            </label>
 
          <div align="center" style="margin-top: 5%">
-           <button ui-sref="tlSuggestions" class=" button button-positive  icon-left ion-ios-undo ">Back</button>
-           <button ui-sref="tlPlans" ng-click="submit()"  ng-disabled="!data.challenges" class=" button button-positive  icon-right ion-forward ">Next</button>
+           <button ui-sref="tlPlans" class=" button button-positive  icon-left ion-ios-undo ">Back</button>
+           <button ui-sref="tlSummary" ng-click="submit()"  ng-disabled="!(data.challenges.length > 5)" class=" button button-positive  icon-right ion-forward ">Next</button>
          </div>
        </form>
       </div>
    </ion-content>
 
-   <div class="bar bar-footer bar-dark">
+   <div style="margin-top: 5%" class="bar bar-footer bar-dark">
        <h3 class="title">&copy; Edo ICTA</h3>
    </div>
 

@@ -271,13 +271,14 @@ app.controller('summaryCtrl1', function($scope, $http, $ionicPopup, $ionicLoadin
                   $scope.hide($ionicLoading);
 
 
-                }, function errorCallback(response) {
+                }, function errorCallback(response, $ionicLoading) {
                     //alert('error');
+                  $scope.hide($ionicLoading);
                   var alertPopup = $ionicPopup.alert({
                     title: 'Login unsuccessful!',
                     template: 'An error occured. Check login credentials'
                   });
-					$scope.errorMsg = "Login Error, Please Try Again";
+					      $scope.errorMsg = "Login Error, Please Try Again";
 
                 });
             }
